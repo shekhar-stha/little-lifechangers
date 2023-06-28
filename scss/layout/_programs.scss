@@ -1,0 +1,59 @@
+.programs-div {
+    .flipped{
+        flex-direction: row-reverse;
+    }
+    .program {
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        margin-bottom: 4rem;
+
+        .program-img-div {
+            width: 50%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .program-info {
+            width: 50%;
+            padding: 1rem 2rem;
+            .first-row {
+                height: 175px;
+
+                .img-info-div {
+                    width: 9.5rem;
+                    height: 100%;
+                    margin-right: 2rem;
+                    background-color: $white;
+                    padding: 2rem;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                h2 {
+                    color: $white;
+                }
+
+                p {
+                    font-size: 18px;
+                    color: $white;
+                }
+            }
+
+            .description{
+                font-size: 18px;
+                color: $white;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+
+}
