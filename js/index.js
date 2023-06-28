@@ -634,26 +634,26 @@ $(".testimonial-carousel").slick({
 });
 
 
-const programInfo = document.querySelectorAll('.program-info');
-const programImg = document.querySelectorAll('.program-img-div'); 
-const setEqualHeight = () => {
-  let maxHeight = 0;
+// const programInfo = document.querySelectorAll('.program-info');
+// const programImg = document.querySelectorAll('.program-img-div'); 
+// const setEqualHeight = () => {
+//   let maxHeight = 0;
 
 
-  programInfo.forEach(card => {
-    card.style.height = '';
-    const cardHeight = card.offsetHeight;
-    if (cardHeight > maxHeight) {
-      maxHeight = cardHeight;
-    }
-  });
+//   programInfo.forEach(card => {
+//     card.style.height = '';
+//     const cardHeight = card.offsetHeight;
+//     if (cardHeight > maxHeight) {
+//       maxHeight = cardHeight;
+//     }
+//   });
 
 
-  programImg.forEach(card => {
-    card.style.height = maxHeight + 'px';
-  });
-};
+//   programImg.forEach(card => {
+//     card.style.height = maxHeight + 'px';
+//   });
+// };
 
-setEqualHeight();
+// setEqualHeight();
 
-window.addEventListener('resize', setEqualHeight);
+// window.addEventListener('resize', setEqualHeight);

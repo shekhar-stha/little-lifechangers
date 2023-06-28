@@ -118,7 +118,7 @@
                         the highest level of attention and support during these crucial early stages of development
                     </p>
 
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-start">
                         <a href="tel:+1 (815) 566-6088" class="btn btn-success px-4 fs-18 mt-3"
                             title="phone number">Call Now</a>
                     </div>
@@ -175,7 +175,7 @@
                         toddler is in loving hands, receiving the best care and endless opportunities to shine.
                     </p>
 
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-start">
                         <a href="tel:+1 (815) 566-6088" class="btn btn-success px-4 fs-18 mt-3"
                             title="phone number">Call
                             Now</a>
@@ -229,13 +229,14 @@
                         </div>
                     </div>
                     <p class="description">
-                         Our exceptional school program, designed for children aged 6 to 12 years, offers a supportive and enriching
+                        Our exceptional school program, designed for children aged 6 to 12 years, offers a supportive
+                        and enriching
                         environment. With a dedicated team of educators, we foster a love for learning, critical
                         thinking, and social growth. Watch your child flourish as they develop essential skills and gain
                         the confidence to succeed both inside and outside the classroom.
                     </p>
 
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-start">
                         <a href="tel:+1 (815) 566-6088" class="btn btn-success px-4 fs-18 mt-3"
                             title="phone number">Call
                             Now</a>
@@ -250,7 +251,31 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
+    <script>
+        const programInfo = document.querySelectorAll('.program-info');
+        const programImg = document.querySelectorAll('.program-img-div');
+        const setEqualHeight = () => {
+            let maxHeight = 0;
 
+
+            programInfo.forEach(card => {
+                card.style.height = '';
+                const cardHeight = card.offsetHeight;
+                if (cardHeight > maxHeight) {
+                    maxHeight = cardHeight;
+                }
+            });
+
+
+            programImg.forEach(card => {
+                card.style.height = maxHeight + 'px';
+            });
+        };
+
+        setEqualHeight();
+
+        window.addEventListener('resize', setEqualHeight);
+    </script>
     <script src="/js/index.js"></script>
 </body>
 
