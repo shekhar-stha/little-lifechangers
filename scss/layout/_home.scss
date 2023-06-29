@@ -370,3 +370,66 @@
         transform: translateY(1rem);
     }
 }
+
+
+
+.gallery {
+    .gallery-photos {
+        column-count: 3;
+        --webkit-column-count: 3;
+        --moz-column-count: 3;
+        gap: 1rem;
+        padding: 2rem;
+
+        @media (max-width: 576px) {
+            column-count: 2;
+        }
+
+        .image {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                height: auto;
+                width: 100%;
+                margin-bottom: 1rem;
+
+                &:hover {
+                    transform: scale(0.97);
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    background-color: $primary;
+
+    img {
+        object-fit: contain;
+    }
+
+    .footer-col {
+        @media only screen and (max-width: 1000px) {
+            text-align: left;
+        }
+
+        a,
+        svg,
+        span {
+            color: #ffffff;
+        }
+
+        .text-info {
+            p {
+                margin-bottom: 0.5rem;
+
+                a {
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+
+}

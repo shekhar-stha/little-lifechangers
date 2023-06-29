@@ -12598,6 +12598,54 @@ section {
     transform: translateY(1rem);
   }
 }
+.gallery .gallery-photos {
+  column-count: 3;
+  --webkit-column-count: 3;
+  --moz-column-count: 3;
+  gap: 1rem;
+  padding: 2rem;
+}
+@media (max-width: 576px) {
+  .gallery .gallery-photos {
+    column-count: 2;
+  }
+}
+.gallery .gallery-photos .image {
+  position: relative;
+  overflow: hidden;
+}
+.gallery .gallery-photos .image img {
+  height: auto;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.gallery .gallery-photos .image img:hover {
+  transform: scale(0.97);
+}
+
+footer {
+  background-color: #393d72;
+}
+footer img {
+  object-fit: contain;
+}
+@media only screen and (max-width: 1000px) {
+  footer .footer-col {
+    text-align: left;
+  }
+}
+footer .footer-col a,
+footer .footer-col svg,
+footer .footer-col span {
+  color: #ffffff;
+}
+footer .footer-col .text-info p {
+  margin-bottom: 0.5rem;
+}
+footer .footer-col .text-info p a {
+  line-height: 25px;
+}
+
 .lb-loader,
 .lightbox {
   text-align: center;
