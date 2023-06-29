@@ -12150,7 +12150,7 @@ section {
   height: 250px;
   overflow: hidden;
   border-radius: 50%;
-  box-shadow: -5px -5px 5px rgba(240, 231, 231, 0.1), 10px 10px 10px rgba(197, 195, 195, 0.4), inset -5px -5px 5px rgba(209, 207, 207, 0.2), inset 10px 10px 10px rgba(197, 191, 191, 0.4);
+  box-shadow: -5px -5px 5px rgba(240, 231, 231, 0.1), 10px 10px 10px rgba(0, 0, 0, 0.4), inset -5px -5px 5px rgba(224, 142, 34, 0.2), inset 10px 10px 10px rgba(235, 101, 48, 0.4);
 }
 .round-div .image {
   position: absolute;
@@ -12174,7 +12174,7 @@ section {
   background-image: linear-gradient(-225deg, #FF4D00 0%, #FF4D00 50%, #FF8694 100%);
   filter: blur(20px);
   z-index: -1;
-  animation: animate 0.5s linear infinite;
+  animation: animate 1s linear infinite;
 }
 
 @keyframes animate {
@@ -12311,7 +12311,6 @@ section {
 .hero .container h1, .hero .container .h1 {
   font-size: 45px;
   padding-top: 4rem;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 1440px) {
   .hero .container h1, .hero .container .h1 {
@@ -12328,7 +12327,6 @@ section {
   font-size: 20px;
   margin-top: 2.5rem;
   z-index: 3;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 576px) {
   .hero .container p {

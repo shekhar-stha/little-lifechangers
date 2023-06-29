@@ -17,7 +17,6 @@
         h1{
             font-size: 45px;
             padding-top: 4rem;
-            text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
             @media (min-width: 1440px) {
                 padding-top: 6.5rem;
             }
@@ -31,7 +30,6 @@
             font-size: 20px;
             margin-top: 2.5rem;
             z-index: 3;
-            text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
             @media (max-width: 576px) {
                 font-size: 18px;
             }

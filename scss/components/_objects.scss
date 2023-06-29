@@ -6,9 +6,9 @@
   overflow: hidden;
   border-radius: 50%;
   box-shadow: -5px -5px 5px rgba(240, 231, 231, 0.1),
-    10px 10px 10px rgba(197, 195, 195, 0.4),
-    inset -5px -5px 5px rgba(209, 207, 207, 0.2),
-    inset 10px 10px 10px rgba(197, 191, 191, 0.4);
+    10px 10px 10px rgba(0, 0, 0, 0.4),
+    inset -5px -5px 5px rgba(224, 142, 34, 0.2),
+    inset 10px 10px 10px rgba(235, 101, 48, 0.4);
 
 
    .image{
@@ -39,7 +39,7 @@
       #FF8694 100%);
   filter: blur(20px);
   z-index: -1;
-  animation: animate 0.5s linear infinite;
+  animation: animate 1s linear infinite;
 }
 
 @keyframes animate {
