@@ -2,11 +2,40 @@
     position: relative;
     height: 73vh;
     width: 100%;
-    background-color: $success;
+    @media (max-width: 576px) {
+        height: 65vh;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        background-color: $success;
+    }
 
     .container {
-        z-index: 2;
+        z-index: 3;
         font-family: 'Fredoka', cursive !important;
+        h1{
+            font-size: 45px;
+            padding-top: 4rem;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            @media (min-width: 1440px) {
+                padding-top: 6.5rem;
+            }
+            @media (max-width: 576px) {
+                font-size: 32px;
+                padding-top: 5rem;
+            }
+        }
+
+        p{
+            font-size: 20px;
+            margin-top: 2.5rem;
+            z-index: 3;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            @media (max-width: 576px) {
+                font-size: 18px;
+            }
+        }
     }
 
     .sun {
@@ -14,8 +43,12 @@
         right: 0;
         width: 8rem;
         object-fit: contain;
-        z-index: 1;
+        z-index: -1;
         animation: bounce2 4s ease-in-out 2s infinite forwards;
+
+        @media (max-width: 768px) {
+            width: 5rem;
+        }
     }
 
     .cloud {
@@ -23,8 +56,12 @@
         left: 1rem;
         width: 8rem;
         object-fit: contain;
-        z-index: 1;
+        z-index: -1;
         animation: bounce2 4s ease-in-out 2s infinite forwards;
+
+        @media (max-width: 768px) {
+            width: 5rem;
+        }
     }
 
     .ground {
@@ -55,7 +92,7 @@
         width: 100%;
         height: 100%;
         opacity: 0.7;
-        z-index: -1;
+        z-index: -2;
         top: 0;
     }
 
@@ -84,6 +121,122 @@
         }
     }
 
+}
+
+.about-us {
+    .information {
+        width: 45%;
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+
+        p {
+            padding-right: 2rem;
+        }
+
+        a {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 1rem;
+            color: $white;
+
+            letter-spacing: 1px;
+            padding: 13px 20px;
+            outline: 0;
+            border: 1px solid black;
+            cursor: pointer;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+
+            &::after {
+                content: "";
+                background-color: $danger;
+                width: 100%;
+                z-index: -1;
+                position: absolute;
+                height: 100%;
+                top: 7px;
+                left: 7px;
+                transition: 0.2s;
+            }
+
+            &:hover:after {
+                top: 0px;
+                left: 0px;
+            }
+
+            @media (min-width: 768px) {
+                padding: 13px 50px 13px;
+            }
+        }
+    }
+
+    .img-div {
+        width: 55%;
+        position: relative;
+
+        @media (max-width: 992px) {
+            width: 100%;
+            height: 25rem;
+            margin-top: 2rem;
+        }
+
+        .cube {
+            width: 60%;
+            object-fit: cover;
+            position: absolute;
+            right: -12%;
+            min-height: 23rem;
+            top: 3rem;
+            border-radius: 30% 70% 70% 30% / 30% 44% 56% 70%;
+
+            @media (max-width: 992px) {
+                width: 100%;
+                right: 0%;
+                height: 18rem;
+            }
+        }
+
+        .left-img {
+            width: 60%;
+            position: absolute;
+            object-fit: cover;
+            left: 3rem;
+            bottom: 5rem;
+            border-radius: 8px;
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    .circle {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #ff4d00;
+        top: 0;
+        opacity: 0.1;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .dotted {
+        position: absolute;
+        top: 0;
+        right: 3rem;
+        z-index: -1;
+        animation: rotate 20s ease-in-out infinite;
+        @media (max-width: 992px) {
+        top: 80%;
+        width: 10rem;
+        }
+    }
 }
 
 .rooms {
@@ -173,98 +326,6 @@
                 padding: 13px 50px 13px;
             }
         }
-    }
-}
-
-.about-us {
-    .information {
-        width: 45%;
-
-        p {
-            padding-right: 2rem;
-        }
-
-        a {
-            font-size: 18px;
-            font-weight: 400;
-            margin-top: 1rem;
-            color: $white;
-
-            letter-spacing: 1px;
-            padding: 13px 20px;
-            outline: 0;
-            border: 1px solid black;
-            cursor: pointer;
-            position: relative;
-            background-color: rgba(0, 0, 0, 0);
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-
-            &::after {
-                content: "";
-                background-color: $danger;
-                width: 100%;
-                z-index: -1;
-                position: absolute;
-                height: 100%;
-                top: 7px;
-                left: 7px;
-                transition: 0.2s;
-            }
-
-            &:hover:after {
-                top: 0px;
-                left: 0px;
-            }
-
-            @media (min-width: 768px) {
-                padding: 13px 50px 13px;
-            }
-        }
-    }
-
-    .img-div {
-        width: 55%;
-        position: relative;
-
-        .cube {
-            width: 60%;
-            object-fit: cover;
-            position: absolute;
-            right: -12%;
-            min-height: 23rem;
-            top: 3rem;
-            border-radius: 30% 70% 70% 30% / 30% 44% 56% 70%;
-        }
-
-        .left-img {
-            width: 60%;
-            position: absolute;
-            object-fit: cover;
-            left: 3rem;
-            bottom: 5rem;
-            border-radius: 8px;
-        }
-    }
-
-    .circle {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        background-color: #ff4d00;
-        top: 0;
-        opacity: 0.1;
-        border-radius: 50%;
-        z-index: -1;
-    }
-
-    .dotted {
-        position: absolute;
-        top: 0;
-        right: 3rem;
-        z-index: -1;
-        animation: rotate 20s ease-in-out infinite;
     }
 }
 
