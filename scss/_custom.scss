@@ -5,7 +5,7 @@
 $primary: #393d72;
 $secondary: #CCA715;
 $warning: #6C6CA6;
-$success: #F0EDFF;
+$success: #f0eefc;
 $danger: #ff4d00;
 $black: #302c2c;
 $white: #fcfef7;
@@ -170,4 +170,48 @@ body {
 
 section {
     overflow: hidden;
+    margin-bottom: 3.5rem;
+}
+
+.header {
+    font-size: 36px;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+}
+
+.sub-header{
+    font-size: 23px;
+    font-weight: 500;
+    text-align: center;
+    color: $danger;
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 4rem;
+        height: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -7px;
+        background-color: $danger;
+    }
+}
+
+.sub-header-start{
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 4rem;
+        height: 5px;
+        left: 0 !important;
+        transform: inherit !important;
+        bottom: -7px;
+        background-color: $danger;
+    }
 }

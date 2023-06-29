@@ -1,0 +1,372 @@
+.hero {
+    position: relative;
+    height: 73vh;
+    width: 100%;
+    background-color: $success;
+
+    .container {
+        z-index: 2;
+        font-family: 'Fredoka', cursive !important;
+    }
+
+    .sun {
+        top: -1rem;
+        right: 0;
+        width: 8rem;
+        object-fit: contain;
+        z-index: 1;
+        animation: bounce2 4s ease-in-out 2s infinite forwards;
+    }
+
+    .cloud {
+        top: -1rem;
+        left: 1rem;
+        width: 8rem;
+        object-fit: contain;
+        z-index: 1;
+        animation: bounce2 4s ease-in-out 2s infinite forwards;
+    }
+
+    .ground {
+        width: 100%;
+        bottom: -1rem;
+        height: 7rem;
+        object-fit: cover;
+        z-index: 2;
+        animation: bounce2 4s ease-in-out 2s infinite forwards;
+    }
+
+    .kids {
+        width: 26%;
+        bottom: 5rem;
+        z-index: 3;
+        animation: bounce 4s ease-in-out 2s infinite forwards;
+    }
+
+    .boys {
+        right: 0;
+    }
+
+    .girls {
+        left: 0;
+    }
+
+    .hero-background {
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        z-index: -1;
+        top: 0;
+    }
+
+
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: translateY(1rem);
+        }
+
+        50% {
+            transform: translateY(0rem);
+        }
+    }
+
+    @keyframes bounce2 {
+
+        0%,
+        100% {
+            transform: translateY(0rem);
+        }
+
+        50% {
+            transform: translateY(1rem);
+        }
+    }
+
+}
+
+.rooms {
+    position: relative;
+
+    &::after {
+        content: "";
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $primary;
+        position: absolute;
+        z-index: -2;
+        opacity: 0.5;
+    }
+
+    .bg-img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+        filter: brightness(20%);
+    }
+
+    .rooms-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    .rooms-row2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 3rem;
+        justify-content: center;
+    }
+
+    .rooms-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-size: 35px;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: $white;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 1rem;
+            color: $white;
+
+            letter-spacing: 1px;
+            padding: 13px 20px 13px;
+            outline: 0;
+            border: 1px solid rgb(255, 255, 255);
+            cursor: pointer;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+
+            &::after {
+                content: "";
+                background-color: $danger;
+                width: 100%;
+                z-index: -1;
+                position: absolute;
+                height: 100%;
+                top: 7px;
+                left: 7px;
+                transition: 0.2s;
+            }
+
+            &:hover:after {
+                top: 0px;
+                left: 0px;
+            }
+
+            @media (min-width: 768px) {
+                padding: 13px 50px 13px;
+            }
+        }
+    }
+}
+
+.about-us {
+    .information {
+        width: 45%;
+
+        p {
+            padding-right: 2rem;
+        }
+
+        a {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 1rem;
+            color: $white;
+
+            letter-spacing: 1px;
+            padding: 13px 20px;
+            outline: 0;
+            border: 1px solid black;
+            cursor: pointer;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+
+            &::after {
+                content: "";
+                background-color: $danger;
+                width: 100%;
+                z-index: -1;
+                position: absolute;
+                height: 100%;
+                top: 7px;
+                left: 7px;
+                transition: 0.2s;
+            }
+
+            &:hover:after {
+                top: 0px;
+                left: 0px;
+            }
+
+            @media (min-width: 768px) {
+                padding: 13px 50px 13px;
+            }
+        }
+    }
+
+    .img-div {
+        width: 55%;
+        position: relative;
+
+        .cube {
+            width: 60%;
+            object-fit: cover;
+            position: absolute;
+            right: -12%;
+            min-height: 23rem;
+            top: 3rem;
+            border-radius: 30% 70% 70% 30% / 30% 44% 56% 70%;
+        }
+
+        .left-img {
+            width: 60%;
+            position: absolute;
+            object-fit: cover;
+            left: 3rem;
+            bottom: 5rem;
+            border-radius: 8px;
+        }
+    }
+
+    .circle {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #ff4d00;
+        top: 0;
+        opacity: 0.1;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .dotted {
+        position: absolute;
+        top: 0;
+        right: 3rem;
+        z-index: -1;
+        animation: rotate 20s ease-in-out infinite;
+    }
+}
+
+.testimonials {
+    position: relative;
+
+    .testimonials-box {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+        padding: 2rem 3rem;
+        position: relative;
+
+        .quote1 {
+            font-size: 4rem;
+            position: absolute;
+            top: -2rem;
+            color: $primary;
+        }
+
+        .quote2 {
+            font-size: 4rem;
+            position: absolute;
+            bottom: -2rem;
+            right: 2rem;
+            color: $primary;
+        }
+
+        .profile-img-div {
+            height: 90px;
+            width: 90px;
+            background-color: $success;
+            border-radius: 50%;
+            padding: 0.5rem;
+            margin-right: 2rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .stars {
+            color: gold;
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        .testimonial-data {
+            color: #757575;
+            font-size: 1.2rem;
+            line-height: 28px;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #ff4d00;
+        top: 0;
+        opacity: 0.1;
+        border-radius: 50%;
+        z-index: -1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(1rem);
+    }
+
+    50% {
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes rotate {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes bounce2 {
+
+    0%,
+    100% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(1rem);
+    }
+}
