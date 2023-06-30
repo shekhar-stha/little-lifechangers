@@ -2,10 +2,12 @@
     position: relative;
     height: 73vh;
     width: 100%;
+
     @media (max-width: 576px) {
         height: 65vh;
     }
-    &::after{
+
+    &::after {
         content: "";
         position: absolute;
         background-color: $success;
@@ -14,22 +16,26 @@
     .container {
         z-index: 3;
         font-family: 'Fredoka', cursive !important;
-        h1{
+
+        h1 {
             font-size: 45px;
             padding-top: 4rem;
+
             @media (min-width: 1440px) {
                 padding-top: 6.5rem;
             }
+
             @media (max-width: 576px) {
                 font-size: 32px;
                 padding-top: 5rem;
             }
         }
 
-        p{
+        p {
             font-size: 20px;
             margin-top: 2.5rem;
             z-index: 3;
+
             @media (max-width: 576px) {
                 font-size: 18px;
             }
@@ -230,9 +236,10 @@
         right: 3rem;
         z-index: -1;
         animation: rotate 20s ease-in-out infinite;
+
         @media (max-width: 992px) {
-        top: 80%;
-        width: 10rem;
+            top: 80%;
+            width: 10rem;
         }
     }
 }
@@ -258,12 +265,26 @@
         height: 100%;
         z-index: -3;
         filter: brightness(20%);
+
+        @media (max-width: 576px) {
+            object-fit: cover;
+        }
     }
 
     .rooms-row {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, auto);
+            gap: 3rem;
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3rem;
+        }
     }
 
     .rooms-row2 {
@@ -271,6 +292,11 @@
         grid-template-columns: repeat(2, 1fr);
         margin-top: 3rem;
         justify-content: center;
+
+        @media (max-width: 576px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3rem;
+        }
     }
 
     .rooms-col {
@@ -336,6 +362,9 @@
         box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
         padding: 2rem 3rem;
         position: relative;
+        @media (max-width: 576px) {
+            padding: 2rem 1rem;
+        }
 
         .quote1 {
             font-size: 4rem;
@@ -441,7 +470,7 @@
         padding: 2rem;
 
         @media (max-width: 576px) {
-            column-count: 2;
+            column-count: 1;
         }
 
         .image {

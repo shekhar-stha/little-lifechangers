@@ -59,7 +59,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/about-us.html">About Us</a>
                         </li>
@@ -76,8 +79,8 @@
                             <a class="nav-link" aria-current="page" href="/contact.html">Contact Us</a>
                         </li>
                     </ul>
-                    <a href="/contact.html" class="btn btn-primary fs-18 px-4">
-                        Schedule a Tour
+                    <a href="/contact.html" class="btn btn-primary fs-20 px-4">
+                        Apply Now
                     </a>
                 </div>
             </div>
@@ -93,8 +96,13 @@
                     Welcome to Little Lifechangers Learning Center, #1 Child Care & Learning Center in Rockford, IL!</p>
 
                 <div class="d-flex justify-content-center pt-5">
-                    <a href="tel:+1 (815) 566-6088" title="phone number" class="btn btn-primary fs-20 px-5">
+                    <a href="tel:+1 (815) 566-6088" title="phone number" class="btn btn-primary fs-20 px-5 me-3">
                         Call Now
+                    </a>
+
+                    <a href="tel:+1 (815) 566-6088" title="phone number"
+                        class="d-sm-block d-none btn btn-outline-primary border-3 fw-500 fs-20 px-5">
+                        Schedule a Tour
                     </a>
                 </div>
             </div>
@@ -155,58 +163,69 @@
             <p class="sub-header">Our Programs</p>
             <h1 class="header text-white">Rooms</h1>
             <div data-aos="fade-down" class="rooms-row">
-                <div class="rooms-col">
-                    <h2>Newborn</h2>
-                    <div class="round-div">
-                        <span></span>
-                        <img class="image" src="/img/newborn-baby.jpg" alt="newborn baby">
+                <a href="/programs.html#newborn">
+                    <div class="rooms-col">
+                        <h2>Newborn</h2>
+                        <div class="round-div">
+                            <span></span>
+                            <img class="image" src="/img/newborn-baby.jpg" alt="newborn baby">
+                        </div>
+                        <p>0 - 15 Months</p>
                     </div>
-                    <p>0 - 15 Months</p>
-                </div>
+                </a>
 
-                <div class="rooms-col">
-                    <h2>Infant</h2>
-                    <div class="round-div">
-                        <span></span>
-                        <img class="image" src="/img/infant-baby.jpg" alt="infant baby">
+                <a href="/programs.html#infant">
+                    <div class="rooms-col">
+                        <h2>Infant</h2>
+                        <div class="round-div">
+                            <span></span>
+                            <img class="image" src="/img/infant-baby.jpg" alt="infant baby">
+                        </div>
+                        <p>15 - 24 Months</p>
                     </div>
-                    <p>15 - 24 Months</p>
-                </div>
+                </a>
 
-                <div class="rooms-col">
-                    <h2>Toddlers</h2>
-                    <div class="round-div">
-                        <span></span>
-                        <img class="image" src="/img/toddler-baby.jpg" alt="toddler baby">
+                <a href="/programs.html#toddler">
+                    <div class="rooms-col">
+                        <h2>Toddlers</h2>
+                        <div class="round-div">
+                            <span></span>
+                            <img class="image" src="/img/toddler-baby.jpg" alt="toddler baby">
+                        </div>
+                        <p>24 - 36 Months</p>
                     </div>
-                    <p>24 - 36 Months</p>
-                </div>
+                </a>
             </div>
             <div data-aos="fade-up" class="rooms-row2">
-                <div class="rooms-col">
-                    <h2>Preschool</h2>
-                    <div class="round-div">
-                        <span></span>
-                        <img class="image" src="/img/preschool-baby.jpg" alt="preschool baby">
+                <a href="/programs.html#preschool">
+                    <div class="rooms-col">
+                        <h2>Preschool</h2>
+                        <div class="round-div">
+                            <span></span>
+                            <img class="image" src="/img/preschool-baby.jpg" alt="preschool baby">
+                        </div>
+                        <p>3 - 5 Years</p>
                     </div>
-                    <p>3 - 5 Years</p>
-                </div>
+                </a>
 
-                <div class="rooms-col">
-                    <h2>School Age</h2>
-                    <div class="round-div">
-                        <span></span>
-                        <img style="transform: scaleX(-1);" class="image" src="/img/school-baby.jpg" alt="school baby">
+                <a href="/programs.html#school">
+                    <div class="rooms-col">
+                        <h2>School Age</h2>
+                        <div class="round-div">
+                            <span></span>
+                            <img style="transform: scaleX(-1);" class="image" src="/img/school-baby.jpg"
+                                alt="school baby">
+                        </div>
+                        <p>6 - 12 Years</p>
                     </div>
-                    <p>6 - 12 Years</p>
-                </div>
+                </a>
             </div>
         </div>
         <img class="bg-img" src="/img/kids-with-teacher.jpg" alt="kids with teacher">
     </section>
 
 
-    <section class="testimonials pb-4">
+    <section class="testimonials pb-4" id="testimonials">
         <div class="container">
             <p class="sub-header">Hear from our Client</p>
             <h1 class="header">Testimonials</h1>
@@ -253,7 +272,7 @@
     </section>
 
     <section class="about-us position-relative">
-        <div class="container d-flex flex-row-reverse py-3">
+        <div class="container d-flex flex-md-row-reverse flex-column py-3">
             <div data-aos="fade-down-right" class="information">
                 <p class="sub-header sub-header-start text-start">About Us</p>
                 <h1 class="header text-start">Where kids learn, explore, and grow in faith.</h1>
@@ -292,10 +311,47 @@
         <img class="dotted" src="/img/dotted-element.png" alt="dotted-element">
     </section>
 
-    <section class="gallery pt-3">
+    <section class="contact-information">
+        <div style="width: fit-content; " class="border border-3 border-white py-5 px-md-5 px-3 mb-5 mx-auto">
+            <h1 class="text-center text-white mb-1">Hours & Location</h1>
+        </div>
+
         <div class="container">
-            <p class="sub-header sub-header-start text-start">Our Galley</p>
-            <h1 class="header text-start">Moments of joy at our day care gallery.</h1>
+            <div class="row flex-md-row flex-column-reverse gap-md-0 gap-5">
+                <div class="info col-md-6 text-center">
+                    <h3>Schedule a Tour</h1>
+                        <p class="col-md-9 mb-3 mx-auto">Our center is located in Rockford, IL just across the street
+                            from
+                            the Discovery Center Children’s Museum and the Burpee Museum of Natural History.</p>
+                        <a href="https://goo.gl/maps/rbPFZ6hJ3ng4cs7Y7" title="google map link"><i
+                                class="fa-solid fa-location-dot text-danger me-1"></i> 650 N Main St, Rockford, IL 61103
+                        </a>
+                        <a href="tel:+1 (815) 566-6088"><i class="fa-solid fa-phone text-danger me-1"></i> +1 (815)
+                            566-6088</a>
+                </div>
+
+                <div class="hours col-md-6 text-center">
+                    <h3>Our Hours</h1>
+                        <p>Monday <span>(6:30 AM - 5:30 PM)</span></p>
+                        <p>Tuesday <span>(6:30 AM - 5:30 PM)</span></p>
+                        <p>Wednesday <span>(6:30 AM - 5:30 PM)</span></p>
+                        <p>Thursday <span>(6:30 AM - 5:30 PM)</span></p>
+                        <p>Friday <span>(6:30 PM - 12 AM)</span></p>
+                        <p>Saturday <span>(12 PM - 5:30 PM)</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-md-0 mt-5">
+            <a href="tel:+1 (815) 566-6088" class="btn btn-danger text-white fs-20 px-5"> Call Now</a>
+        </div>
+        <img class="background-img" src="/img/kids-with-teacher.jpg" alt="kids practicing">
+    </section>
+
+    <section class="gallery pt-3" data-aos="fade-up">
+        <div class="container">
+            <p class="sub-header">Our Galley</p>
+            <h1 class="header">Moments of joy at our day care gallery.</h1>
             <div class="gallery-photos">
 
                 <div class="image">
@@ -363,7 +419,8 @@
         <div class="container mt-5">
             <div class="row fw-500 fs-16">
                 <div class="col-lg pe-lg-5 me-lg-5 col-12 mb-lg-0 mb-5 text-lg-left">
-                    <img src="/img/logo.png" alt="logo" width="200" height="200" class="d-inline-block my-auto mb-3" />
+                    <img src="/img/logo-bw.png" alt="logo" width="200" height="200"
+                        class="d-inline-block my-auto mb-3" />
                 </div>
 
                 <div class="col-lg col-md-4 col-12 mb-lg-0 mb-4 footer-col text-left">

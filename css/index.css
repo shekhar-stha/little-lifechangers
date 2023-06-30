@@ -762,7 +762,7 @@ progress {
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1340px;
+    max-width: 1360px;
   }
 }
 :root {
@@ -12246,9 +12246,20 @@ section {
   display: flex;
   margin-bottom: 4rem;
 }
+@media (max-width: 992px) {
+  .programs-div .program {
+    flex-direction: column;
+  }
+}
 .programs-div .program .program-img-div {
   width: 50%;
-  max-height: 600px !important;
+  max-height: 510px !important;
+}
+@media (max-width: 992px) {
+  .programs-div .program .program-img-div {
+    width: 100%;
+    height: 350px !important;
+  }
 }
 .programs-div .program .program-img-div img {
   width: 100%;
@@ -12258,6 +12269,11 @@ section {
 .programs-div .program .program-info {
   width: 50%;
   padding: 1rem 2rem;
+}
+@media (max-width: 992px) {
+  .programs-div .program .program-info {
+    width: 100%;
+  }
 }
 .programs-div .program .program-info .first-row {
   height: 175px;
@@ -12535,16 +12551,39 @@ section {
   z-index: -3;
   filter: brightness(20%);
 }
+@media (max-width: 576px) {
+  .rooms .bg-img {
+    object-fit: cover;
+  }
+}
 .rooms .rooms-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
+}
+@media (max-width: 992px) {
+  .rooms .rooms-row {
+    grid-template-columns: repeat(2, auto);
+    gap: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .rooms .rooms-row {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+  }
 }
 .rooms .rooms-row2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 3rem;
   justify-content: center;
+}
+@media (max-width: 576px) {
+  .rooms .rooms-row2 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+  }
 }
 .rooms .rooms-col {
   width: 100%;
@@ -12604,6 +12643,11 @@ section {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
   padding: 2rem 3rem;
   position: relative;
+}
+@media (max-width: 576px) {
+  .testimonials .testimonials-box {
+    padding: 2rem 1rem;
+  }
 }
 .testimonials .testimonials-box .quote1 {
   font-size: 4rem;
@@ -12686,7 +12730,7 @@ section {
 }
 @media (max-width: 576px) {
   .gallery .gallery-photos {
-    column-count: 2;
+    column-count: 1;
   }
 }
 .gallery .gallery-photos .image {
